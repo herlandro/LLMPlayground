@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct MockClaudeService: LLMService {
+    func generateResponse(for prompt: String) async throws -> String {
+        return "Claude (mock) responde: \(prompt.uppercased())"
+    }
+}

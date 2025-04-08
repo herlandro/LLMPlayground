@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct LocalFallbackService: LLMService {
+    func generateResponse(for prompt: String) async throws -> String {
+        return "Local response (no real AI): Remember to think for yourself!"
+    }
+}
